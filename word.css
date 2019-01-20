@@ -1,0 +1,33 @@
+body {
+	 background: #FFFFFF;
+ }
+ 
+ #root{
+	width: 250px;
+	height: 200px;
+	background: gainsboro;
+}
+
+#disp{
+	font-size: 30px;
+	color: red;
+	text-align: center;
+}
+
+#disp2{
+	font-size: 25px;
+	color: blue;
+	text-align: center;
+}
+
+#contr{
+width: 250px;
+height: auto;
+margin: auto;
+border: solid;
+border-width: thin;
+}
+
+#ans,#btn{
+	margin-left: 10px;
+}
