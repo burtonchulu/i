@@ -1,0 +1,32 @@
+body {
+	 background: #FFFFFF;
+ }
+ 
+ #board1{
+	color: rgba(0,0,0,1);
+}
+
+#d1{
+     width: 80%;
+     height: auto;
+	background: pink;
+	margin: auto;
+}
+
+#d2{
+	width:80%;
+	height: auto;
+	margin: auto;
+}
+
+p{
+	margin-left: 10px;
+	font-size: 24px;
+}
+
+input{
+	width: 90%;
+	height:100px;
+}
+
+ 
