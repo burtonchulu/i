@@ -1,0 +1,104 @@
+.gamelayer{
+	display:none;
+}
+
+#maincontainer{
+	width: 50%;
+}
+
+#canvascontainer{
+	background: rgba(0,0,250,0.5);
+	display: flex;
+	align-items: center;
+}
+
+#loadingscreen{
+background: rgba(0,0,250,0.5);
+	display: flex;
+	width: 100%;
+	height: 70%;
+	justify-content: center;
+	align-items: center;
+}
+
+#gamescreen{
+     background: rgba(0,0,250,0.5);
+     box-shadow: 2px 3px 5px rgba(0,0,0,0.6);
+     border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50%;
+}
+
+#play{
+	position: absolute;
+	left: 45%;
+	width: 15%;
+	height: auto;
+}
+
+#sound,#controls{
+	display: none;
+}
+
+#ans{
+	position: relative;
+	left: 0px;
+	top: 20px;
+}
+
+#submit{
+	position: relative;
+	left: 10px;
+	top: 20px;
+}
+
+#neword{
+	position: relative;
+	left: 0px;
+	top: 20px;
+}
+
+#showans{
+	position: relative;
+	left: 10px;
+	top: 20px;
+}
+
+#sound{
+	position: relative;
+	top: 10px;
+}
+
+#check{
+	transform: scale(1.5);
+}
+
+input,button{
+	font-size: 2em;
+	color: green;
+}
+
+#loadinfo{
+	font-size: 1em;
+}
+
+label{
+	font-size: 1.5em;
+	color: teal;
+}
+
+#disp{
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+#score{
+     position: absolute;
+     left: 20px;
+     top: 20px;
+	color: rgba(250,250,250,0.5);
+	font-size: 1em;
+}
