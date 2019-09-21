@@ -30,7 +30,7 @@ aud.src = url;
 aud.id = "audy";
 
 if(aud.addEventListener){
-aud.addEventListener("loadstart",Loader.itemsLoaded);
+aud.addEventListener("canplaythrough",Loader.itemsLoaded);
 return aud;
 }
 else if(aud.attachEvent){
@@ -188,7 +188,7 @@ resizeControls:function (){
 
 loadAssets:function (){
 
-Game.backgroundSound = Loader.loadSounds("background.mp3");
+Game.backgroundSound = Loader.loadSounds("alienbackground.mp3");
 Game.gunfireSound = Loader.loadSounds("gunfire.wav");
 Game.gameoverSound = Loader.loadSounds("win.wav");
 Game.hitSound = Loader.loadSounds("hit.wav");
@@ -270,6 +270,18 @@ toast.innerHTML = "Bullets less than enemies";
 },
 
 animate:function (){
+	var sh = screen.height;
+	if(sh<480){
+		Game.hideGameLayers();
+		sorryscreen.style.display = "flex";
+		function show(){
+			Game.countDownTimer();
+			}
+			setTimeout(show,500);
+		}
+		if(sh>=480){
+			Game.hideGameLayers();
+			canvascontainer.style.display = "block";
 Game.heroPanning();
 Game.context.clearRect(0,0,0.95*screen.width,0.5*screen.height);
 Entities.draw();
@@ -279,7 +291,7 @@ Game.animateFrame = window.requestAnimationFrame(Game.animate,Game.canvas);
 Game.playBackgroundMusic();
 Game.toggleGamePause();
 Game.drawLine();
-
+}
 },
 playBackgroundMusic:function (){
 
