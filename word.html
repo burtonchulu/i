@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+ <head>
+	 <title>Word game</title>
+	 <meta charset="UTF-8"/>
+	 <meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<meta name="description" content="Get served scrambled words to figure out and unscramble"/>
+	 <link rel="stylesheet" href="word.css" type="text/css"/>
+	 <link rel="stylesheet" href="word480.css" media="only screen and (min-width:480px)" type="text/css"/>
+	 <link rel="stylesheet" href="word960.css" media="only screen and (min-width:960px)" type="text/css"/>
+	 <script src="word.js"></script>
+ </head>
+	 <body>
+	 
+	 <div id="maincontainer">
+	 
+	 <div id="canvascontainer" class="gamelayer">
+	 <div id="canvas">
+		<div class="playdiv">
+	 <h1 id="play" src="play.png" onClick="Game.start();">PLAY</h1>
+		</div>
+		</div>
+	 </div>
+	 
+	 <div id="loadingscreen" class="gamelayer">
+	 <p id="loadinfo"></p>
+	 </div>
+	 
+	 <div id="gamescreen" class="gamelayer">
+	 <p id="score">Score: 0</p>
+	 <p id="life">Life: 3</p>
+	 <p id="scrword"></p>
+	 <p id="disp"></p>
+	 <img  id="tick"src="">
+</div>
+	 <div id="sound" class="opts">
+	 <input type="checkbox" id="check"><label>sound</label>
+	 </div>
+	 <br>
+	 <div id="keybod">
+	 <div id="l1" class="kp" onClick="Game.updateWord(this.id);">q</div>
+	 <div id="l2" class="kp" onClick="Game.updateWord(this.id);">w</div>
+	 <div id="l3" class="kp" onClick="Game.updateWord(this.id);">e</div>
+	 <div id="l4" class="kp" onClick="Game.updateWord(this.id);">r</div>
+	 <div id="l5" class="kp" onClick="Game.updateWord(this.id);">t</div>
+	 <div id="l6" class="kp" onClick="Game.updateWord(this.id);">y</div>
+	 <div id="l7" class="kp" onClick="Game.updateWord(this.id);">u</div>
+	 <div id="l8" class="kp" onClick="Game.updateWord(this.id);">i</div>
+	 <div id="l9" class="kp" onClick="Game.updateWord(this.id);">o</div>
+	 <div id="l10" class="kp" onClick="Game.updateWord(this.id);">p</div>
+	 <div id="l11" class="kp" onClick="Game.updateWord(this.id);">a</div>
+	 <div id="l12" class="kp" onClick="Game.updateWord(this.id);">s</div>
+	 <div id="l13" class="kp" onClick="Game.updateWord(this.id);">d</div>
+	 <div id="l14" class="kp" onClick="Game.updateWord(this.id);">f</div>
+	 <div id="l15" class="kp" onClick="Game.updateWord(this.id);">g</div>
+	 <div id="l16" class="kp" onClick="Game.updateWord(this.id);">h</div>
+	 <div id="l17" class="kp" onClick="Game.updateWord(this.id);">j</div>
+	 <div id="l18" class="kp" onClick="Game.updateWord(this.id);">k</div>
+	 <div id="l19" class="kp" onClick="Game.updateWord(this.id);">l</div>
+	 <div id="l20" class="kp" onClick="Game.updateWord(this.id);">z</div>
+	 <div  id="l21"class="kp" onClick="Game.updateWord(this.id);">x</div>
+	 <div id="l22" class="kp" onClick="Game.updateWord(this.id);">c</div>
+	 <div id="l23" class="kp" onClick="Game.updateWord(this.id);">v</div>
+	 <div id="l24" class="kp" onClick="Game.updateWord(this.id);">b</div>
+	 <div id="l25" class="kp" onClick="Game.updateWord(this.id);">n</div>
+	 <div id="l26" class="kp" onClick="Game.updateWord(this.id);">m</div>
+	 <div class="kps">Delete</div>
+	 <div class="kps" id="submit" onClick="Game.submitAnswer();">Submit</div>
+	 <div class="kps" onClick="Game.neWord();">New word</div>
+	 <div class="kps" onClick="Game.showAnswer();">Show answer</div>
+	 </div>
+	 
+	 <div id="gameoverscreen" class="gamelayer">
+	 <p id="gameover">Game over</p>
+	 <button id="playagain" onClick="Game.tryAgain();">try again</button>
+	 </div>
+	 
+	 </div>
+	
+	 </body>
+ </html>
