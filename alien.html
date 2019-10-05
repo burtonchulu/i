@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+ <head>
+	 <title>Play a shooting game-Alien attack</title>
+	 <meta charset="UTF-8"/>
+	 <meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<meta name="description" content="Shoot down alien invaders before they reach your location."/>
+	 <link rel="stylesheet" href="alien.css" type="text/css"/>
+	 <script src="alien.js"></script>
+ </head>
+	 <body>
+	 
+	 <div id="maincontainer">
+		
+		<div id="instructscreen" class="gamelayer">
+			<p id="mob" class="txt">
+				Shoot down aliens before they cross the red line.You must be accurate when shooting because you have limited bullets. Use left arrow to move left,right arrow to move right, stop icon to stop and circle in extreme right to fire.
+				</p>
+				<p id="desk" class="txt">
+Shoot down aliens before they cross the red line.You must be accurate when shooting because you have limited bullets. Use left and right arrow to move sideways,down arrow to stop and up arrow to fire.
+</p>
+<br>
+<button id="skip" class="txt">SKIP</button>
+			</div>
+	 
+	 <div id="landingscreen" class="gamelayer">
+	 
+<div class="playdiv">
+	 <h1 class="play" onClick="Game.ended=false;Game.resetArrays();if(!Game.assetsloaded){Game.loadingPage();}else{Game.startGame();}">PLAY</h1>
+	 </div>
+	 </div>
+	 
+	 <div id="loadingscreen" class="gamelayer">
+	 
+	 <p id="loadinfo">loading...</p>
+	 
+	 </div>
+	 
+	 <div id="canvascontainer" class="gamelayer">
+<a id="life" class="txt"></a>
+<a id="bullets" class="txt"></a>
+<a id="enemies" class="txt"></a>
+	 <canvas id="gamescreen"></canvas>
+	<div id="toast"></div>
+<input type="checkbox" id="check"><label class="txt">Sound</label>
+<input type="checkbox" id="check2"><label class="txt">Pause</label>
+   <img src="left.png" id="btnL" alt="leftcontrol" class="controls">
+   <img src="stop.png" id="btnS" alt="stopcontrol" class="controls">
+   <img src="right.png" id="btnR" alt="rightcontrol" class="controls">
+   <img src="shoot.png" id="btnF" alt="shootcontrol" class="controls">
+</div>
+	 
+	 <div id="gameoverscreen" class="gamelayer">
+	 <h1 id="gameover">Game over</h1>
+</div>
+   <div id="tryagainscreen" class="gamelayer">
+<div class="playdiv">
+<h1 onClick="Game.tryAgain();">Try again</h1>
+</div>
+	 </div>
+<div id="creditscreen" class="gamelayer">
+<div id="credits">
+<h1>You won!!</h1>
+</div>
+</div>
+<div id="sorryscreen" class="gamelayer">
+	<h1>Rotate device to portrait mode</h1>
+	</div>
+	 </div>
+	
+	 </body>
+ </html>
