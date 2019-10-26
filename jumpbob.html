@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+ <head>
+	 <title>Play Jumpbob an online platformer game</title>
+	 <meta charset="UTF-8"/>
+	 <meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<meta name="description" content="Jumpbob's specialty is jumping high.Crush enemies by jumping on them"/>
+	 <link rel="stylesheet" href="jumpbob.css" type="text/css"/>
+	 <script src="Box2d.min.js"></script>
+	 <script src="jumpbob.js"></script>
+ </head>
+	 <body>
+	 <div id="gamecontainer">
+	 
+	 <div id="canvascontainer" class="gamelayer">
+	<input type="checkbox" id="check"><label>sound</label><img src="life.png" id="life0" class="im"><img src="life.png" id="life1" class="im"><img src="life.png" id="life2" class="im">
+	 <canvas id="canvas">Your browser does not support canvas</canvas>
+	 <button id="btnR">Fo</button>
+	 <button id="btnL">Ba</button>
+	 <button id="btnJ">Ju</button>
+	<div id="toast"></div>
+	<div id="toasty"></div>
+	 </div>
+	 <div id="landingpage" class="gamelayer">
+		<div>
+<h1>Instructions</h1>
+<p id="mob">Use left arrow to move left,right arrow to move right,up arrow to jump,stop icon to stop and shoot icon to shoot.</p>
+<p id="desk">Use left arrow to move left,right arrow to move right,up arrow to jump,down arrow to stop</p>
+<button id="play" onClick="Game.loadResources();">SKIP</button>
+</div>
+</div>
+	 
+	 <div id="levelselectscreen" class="gamelayer">
+		<div id="levelsbtns">
+<h1>LEVEL</h1>
+</div>
+	 </div>
+	 
+	<div id="loadingscreen" class="gamelayer">
+		<div id="loadinfo">
+			</div>
+</div>
+	 
+	 <div id="endingscreen" class="gamelayer">
+		<div>
+<h2>GAME OVER</h2>
+<h3 onClick="Game.playagain()">try again</h3>
+<h3><a href="index.html">Exit</a></h3>
+</div>
+	 </div>
+	 
+	 <div id="winscreen" class="gamelayer">
+		<div>
+	 <h2>YOU WON</h2>
+	<h3><a href="index.html">Exit</a></h3>
+	</div>
+	 </div>
+	 
+	 </div>
+	 </body>
+ </html>
